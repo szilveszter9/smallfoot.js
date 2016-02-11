@@ -1,0 +1,21 @@
+{
+  "name": "aggr.js",
+  "version": "1.0.0",
+  "description": "Aggr.js is a minimalist library for functional programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/browserify/bin/cmd.js index.js --debug | ./node_modules/exorcist/bin/exorcist.js ./aggr.js.map > ./aggr.js && gzip -9 -k aggr.js"
+  },
+  "keywords": [
+    "functional",
+    "programming",
+    "minimalist"
+  ],
+  "author": "Szilveszter Szilagyi",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "exorcist": "^0.4.0"
+  }
+}
