@@ -11,7 +11,7 @@ https://github.com/szilveszter9/smallfoot.js
 Examples
 ========
 * For more examples see: play.js at https://github.com/szilveszter9/smallfoot-sandbox
-* Read it from bottom to top: get a DOM element, read it's innerHTML, make it uppercase, and log that.
+* Get a DOM element, read it's innerHTML, make it uppercase, and log that. (Read it from bottom to top.)
 ```javascript
 var app = l.compose(
   l.log.value,
@@ -22,6 +22,22 @@ var app = l.compose(
 
 app('#mydiv');
 ```
+* Request JSON data and inject it into a template. (Read the compose from right to left.)
+```javascript
+var userTemplate = l.template.set('<div class="avatar">{{login}}<img src="{{avatar_url}}"/></div>');
+var url = "https://api.github.com/repos/mozilla/kuma/contributors";
+var userTemplates = l.compose(l.map(userTemplate), l.http.getResponseJSON);
+var usersTemplate = l.compose(l.array.toString, userTemplates);
+var eitherUsersTemplate = l.compose(l.Either('could not generate the template'), l.array.toString, userTemplates);
+function app(){
+  var setMydiv = getElSetHtml('#mydiv');
+  var showUsers = l.compose(l.map(setMydiv), eitherUsersTemplate);
+  l.http.get(showUsers)(url)();
+}
+
+app();
+```
+
 
 NPM
 ===
