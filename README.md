@@ -41,7 +41,7 @@ app();
 
 NPM
 ===
-npmjs.com/package/smallfoot
+https://www.npmjs.com/package/smallfoot
 
 Installation
 ============
@@ -50,3 +50,14 @@ npm install smallfoot
 Contribution
 ============
 Bug fixes, docs and examples are welcomed.
+
+You can start with smallfoot-sandbox, see https://github.com/szilveszter9/smallfoot-sandbox
+```shell
+git clone https://github.com/szilveszter9/smallfoot.js
+git clone https://github.com/szilveszter9/smallfoot-sandbox
+cd smallfoot-sandbox
+npm install
+npm link ../smallfoot.js
+npm run dev
+npm start
+```
