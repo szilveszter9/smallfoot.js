@@ -1,16 +1,18 @@
 {
-  "name": "aggr.js",
-  "version": "1.0.0",
-  "description": "Aggr.js is a minimalist library for functional programming",
+  "name": "smallfoot",
+  "version": "0.0.2",
+  "description": "Smallfoot.js is a minimalist library for functional programming, with small footprint.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/browserify/bin/cmd.js index.js --debug | ./node_modules/exorcist/bin/exorcist.js ./aggr.js.map > ./aggr.js && gzip -9 -k aggr.js"
+    "build": "./node_modules/browserify/bin/cmd.js index.js --debug | ./node_modules/exorcist/bin/exorcist.js ./smallfoot.js.map > ./smallfoot.js && gzip -9 -k smallfoot.js"
   },
   "keywords": [
     "functional",
     "programming",
-    "minimalist"
+    "minimalist",
+    "small",
+    "footprint"
   ],
   "author": "Szilveszter Szilagyi",
   "license": "MIT",
