@@ -1,6 +1,6 @@
 {
   "name": "smallfoot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Smallfoot.js is a minimalist library for functional programming, with small footprint.",
   "main": "index.js",
   "scripts": {
