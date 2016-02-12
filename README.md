@@ -10,7 +10,18 @@ https://github.com/szilveszter9/smallfoot.js
 
 Examples
 ========
-https://github.com/szilveszter9/smallfoot-sandbox
+* For more examples see: play.js at https://github.com/szilveszter9/smallfoot-sandbox
+* Read it from bottom to top: get a DOM element, read it's innerHTML, make it uppercase, and log that.
+```javascript
+var app = l.compose(
+  l.log.value,
+  l.string.upper,
+  l.object.getValue('innerHTML'),
+  l.dom.getDomElement
+);
+
+app('#mydiv');
+```
 
 NPM
 ===
