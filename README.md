@@ -8,6 +8,10 @@ Github
 ======
 https://github.com/szilveszter9/smallfoot.js
 
+Examples
+========
+https://github.com/szilveszter9/smallfoot-sandbox
+
 NPM
 ===
 npmjs.com/package/smallfoot
