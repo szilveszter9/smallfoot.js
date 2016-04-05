@@ -11,6 +11,7 @@ https://github.com/szilveszter9/smallfoot.js
 Examples
 ========
 * For more examples see: play.js at https://github.com/szilveszter9/smallfoot-sandbox
+* You can also look into the test folder in this project.
 * Get a DOM element, read it's innerHTML, make it uppercase, and log that. (Read it from bottom to top.)
 ```javascript
 var app = l.compose(
@@ -45,7 +46,15 @@ https://www.npmjs.com/package/smallfoot
 
 Installation
 ============
+```shell
 npm install smallfoot
+```
+
+Build distribution
+==================
+```shell
+npm run-script dist smallfoot
+```
 
 Contribution
 ============

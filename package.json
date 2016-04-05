@@ -1,11 +1,11 @@
 {
   "name": "smallfoot",
-  "version": "0.0.4",
+  "version": "",
   "description": "Smallfoot.js is a minimalist library for functional programming, with small footprint.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/browserify/bin/cmd.js index.js --debug | ./node_modules/exorcist/bin/exorcist.js ./smallfoot.js.map > ./smallfoot.js && gzip -9 -k smallfoot.js"
+    "test": "./node_modules/.bin/nodemon --exec './node_modules/.bin/_mocha --recursive'",
+    "dist": "./node_modules/browserify/bin/cmd.js index.js --debug | ./node_modules/exorcist/bin/exorcist.js ./smallfoot.js.map > smallfoot.js && gzip -9 -k smallfoot.js"
   },
   "keywords": [
     "functional",
@@ -19,5 +19,9 @@
   "dependencies": {
     "browserify": "^13.0.0",
     "exorcist": "^0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1"
   }
 }
