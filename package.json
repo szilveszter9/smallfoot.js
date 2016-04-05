@@ -4,7 +4,8 @@
   "description": "Smallfoot.js is a minimalist library for functional programming, with small footprint.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/nodemon --exec './node_modules/.bin/_mocha --recursive'",
+    "start": "nodemon --verbose false --exec 'npm run-script test'",
+    "test": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover ./node_modules/.bin/_mocha -- ./test/ -R spec --recursive; echo \"open $(pwd)/coverage/lcov-report/index.html\"",
     "dist": "./node_modules/browserify/bin/cmd.js index.js --debug | ./node_modules/exorcist/bin/exorcist.js ./smallfoot.js.map > smallfoot.js && gzip -9 -k smallfoot.js"
   },
   "keywords": [
@@ -21,6 +22,8 @@
     "exorcist": "^0.4.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "istanbul": "^1.0.0-alpha.2",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1"
   }

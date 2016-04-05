@@ -93,4 +93,14 @@ describe('_array', function(){
     assert.deepEqual(arr.toString(['a','b','c']), 'abc');
     done();
   });
+  it('isEvenKey', function(done){
+    assert.deepEqual(arr.isEvenKey(1,2), true);
+    assert.deepEqual(arr.isEvenKey(1,3), false);
+    done();
+  });
+  it('isOddKey', function(done){
+    assert.deepEqual(arr.isOddKey(1,2), false);
+    assert.deepEqual(arr.isOddKey(1,3), true);
+    done();
+  });
 });

@@ -1,5 +1,5 @@
 'use strict';
-let assert = require('assert');
+var assert = require('assert');
 
 var obj = require ('../../lib/_object');
 
@@ -40,6 +40,22 @@ describe('_object', function(){
     var orig = {a:1, b:9, c:3};
     def9(orig, 9)
     assert.deepEqual(orig, {a: 1, b:9, c:3, d: {e: {f: 9}}});
+    done();
+  });
+  it('keyIsValue', function(done){
+    var isb9 = obj.keyIsValue('9', 'b');
+    assert.deepEqual(isb9({a: 1, b:9, c:3}), undefined);
+    assert.deepEqual(isb9({a: 1, b:'9', c:3}), {a: 1, b:'9', c:3});
+    done();
+  });
+  it('keyIsNotValue', function(done){
+    var isbn9 = obj.keyIsNotValue('9', 'b');
+    assert.deepEqual(isbn9({a: 1, b:9, c:3}), {a: 1, b:9, c:3});
+    assert.deepEqual(isbn9({a: 1, b:'9', c:3}), undefined);
+    done();
+  });
+  it('getThis', function(done){
+    assert.equal(obj.getThis.bind(5).call().valueOf(), 5);
     done();
   });
 });

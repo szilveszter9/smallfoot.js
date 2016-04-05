@@ -53,7 +53,7 @@ npm install smallfoot
 Build distribution
 ==================
 ```shell
-npm run-script dist smallfoot
+npm run dist
 ```
 
 Contribution
