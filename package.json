@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
+    "babel-eslint": "^6.0.2",
     "istanbul": "^1.0.0-alpha.2",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1"
