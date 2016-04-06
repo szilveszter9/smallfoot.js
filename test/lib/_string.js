@@ -2,6 +2,7 @@
 let assert = require('assert');
 
 var str = require ('../../lib/_string');
+var json = require ('../../lib/_json');
 
 describe('_string', function(){
   it('cat', function(done){
@@ -31,6 +32,11 @@ describe('_string', function(){
   });
   it('toArray', function(done){
     assert.deepEqual(str.toArray('abc'), ['a','b','c']);
+    done();
+  });
+  it('toJSON', function(done){
+    assert.deepEqual(json.toJSON, str.toJSON);
+    assert.deepEqual(str.toJSON('{"abc":"1"}'), {abc:1});
     done();
   });
 });
