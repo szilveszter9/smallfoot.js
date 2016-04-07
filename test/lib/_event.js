@@ -48,7 +48,7 @@ describe('_event', function(){
       [{buttons: 7}, true ]
     ];
     matrix.forEach(function(el){
-      assert.equal(evt.isLeftMouseButtonDown(el[0]), el[1]);
+      assert.equal(evt.isLeftMouseButtonDown(el[0]), el[1], '' + el[0] + ' ' + el[1]);
     });
     done();
   });
@@ -63,7 +63,7 @@ describe('_event', function(){
       [{buttons: 7}, true ]
     ];
     matrix.forEach(function(el){
-      assert.equal(evt.isRightMouseButtonDown(el[0]), el[1]);
+      assert.equal(evt.isRightMouseButtonDown(el[0]), el[1], '' + el[0] + ' ' + el[1]);
     });
     done();
   });
@@ -78,7 +78,7 @@ describe('_event', function(){
       [{buttons: 7}, true ]
     ];
     matrix.forEach(function(el){
-      assert.equal(evt.isMiddleMouseButtonDown(el[0]), el[1]);
+      assert.equal(evt.isMiddleMouseButtonDown(el[0]), el[1], '' + el[0] + ' ' + el[1]);
     });
     done();
   });

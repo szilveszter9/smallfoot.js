@@ -31,13 +31,13 @@ describe('_dom', function(){
     done();
   });
   it('setAttributeElValue', function(done){
-    assert.deepEqual(dom.setAttributeElValue('b')('#a9')(2), 2);
-    assert.deepEqual(dom.setAttributeElValue('b')('@invalidSelector')(2), 2);
+    assert.deepEqual(dom.setAttributeElValue('b')(Dom['#a9'])(2), 2);
+    assert.deepEqual(dom.setAttributeElValue('b')(Dom['#simple_object'])(2), 2);
     done();
   });
   it('setAttributeValueEl', function(done){
-    assert.deepEqual(dom.setAttributeValueEl('b')(2)('#a9'), '#a9');
-    assert.deepEqual(dom.setAttributeValueEl('b')(2)('@invalidSelector'), '@invalidSelector');
+    assert.deepEqual(dom.setAttributeValueEl('b')(2)(Dom['#a9']), Dom['#a9']);
+    assert.deepEqual(dom.setAttributeValueEl('b')(2)(Dom['#simple_object']), {simple_object:3, b:2});
     done();
   });
   it('setElAttribute', function(done){
